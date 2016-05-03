@@ -1,0 +1,37 @@
+* {
+  text-align: center;
+  background-color:lightblue;
+  list-style: none;
+  /*background-image: url"https://www.google.com/imgres?imgurl=http%3A%2F%2Fwww.healthday.com%2Fimg%2Fhdr%2Fhospital-news-content.jpg&imgrefurl=http%3A%2F%2Fwww.healthday.com%2Fhospital-news-content.html&docid=CDlkbNSMb3TWrM&tbnid=xtlEJqwFJmgJkM%3A&w=740&h=223&bih=705&biw=1280&ved=0ahUKEwirmbCNr57MAhUnIsAKHdVlB4IQMwg_KAowCg&iact=mrc&uact=8"*/
+
+}
+
+.viewbutton:hover,.searchbutton:hover,.addbutton:hover{
+  cursor: pointer;
+  background-color: black;
+}
+
+img {
+  width: 30%;
+  height: 30%;
+}
+
+
+
+/*let Styles = {
+  width: '100vw',
+  backgroundColor: 'purple',
+  color: 'white',
+  padding: '1%',
+  textAlign: 'center',
+  ul: {
+    listStyleType: 'none'
+  },
+  h1: {
+    fontSize: '3em'
+  },
+  a: {
+    color: 'white',
+    textDecoration: 'none'
+  }
+};*/
