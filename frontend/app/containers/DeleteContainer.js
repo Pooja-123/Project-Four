@@ -3,7 +3,7 @@ import axios from 'axios';
 import Delete from '../components/Delete';
 import ajaxHelpers from '../utils/ajaxHelpers';
 
-const DeleteRecordContainer = React.createClass({
+const DeleteContainer = React.createClass({
   getInitialState: function() {
     return {
       // ajaxReturn: [],
@@ -52,4 +52,4 @@ const DeleteRecordContainer = React.createClass({
   }
 });
 
-export default DeleteRecordContainer;
+export default DeleteContainer;

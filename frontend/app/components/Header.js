@@ -8,8 +8,8 @@ const Header = React.createClass({
         <h1 style={HeaderStyles.h1}>Healthy Hospital</h1>
         <nav>
           <ul style={HeaderStyles.ul}>
-            <li><a href="#" style={HeaderStyles.a}>Recipes</a></li>
-            <li><a href="#" style={HeaderStyles.a}>New Recipe</a></li>
+            <li><a href="#" style={HeaderStyles.a}>Records</a></li>
+            <li><a href="#" style={HeaderStyles.a}>New Records</a></li>
           </ul>
         </nav>
       </header>

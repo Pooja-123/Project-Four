@@ -59,10 +59,8 @@ const AddContainer =React.createClass({
       <div>
         <Add
           onChangeDoctorName={this.handleChangeName}
-
           onChangeSpecial={this.handleEmail}
           onSubmit={this.handleSubmit}
-
           recordAddedMsg={this.state.recordAdded}
           recordnew={this.state.record}
         />

@@ -32,7 +32,7 @@ const ListContainer = React.createClass({
     for(const record of this.state.records){
       console.log(record);
       for(const key in record){
-        recordListElements.push(<li> {record[key]}</li>);
+        recordListElements.push(<li className="eachrecord"> {record[key]}</li>);
       }
     }
     console.log(recordListElements);

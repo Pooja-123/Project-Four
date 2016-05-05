@@ -12,7 +12,7 @@ function List(props){
       placeholder="search"
       onchange={props.onUpdateSearch}
       />
-      <ul>
+      <ul className="design">
 
         {props.recordList}
       </ul>
