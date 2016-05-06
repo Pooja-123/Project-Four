@@ -1,19 +1,16 @@
 import React from 'react';
 
 function Hospital(props){
-  console.log(props);
+  console.log(props.recordList);
   return (
     <div>
       <header>
         <h1>List of Ny Hospitals</h1>
       </header>
-      <input type="text"
-        placeholder="search"
-        onchange={props.onUpdateSearch}
-      />
+      
       <ul>
 
-        {props.hospitalapi}
+        {props.recordList}
       </ul>
     </div>
    );

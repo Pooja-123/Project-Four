@@ -1,7 +1,7 @@
 import React from 'react';
-import _ from 'lodash';
 import Hospital from '../components/Hospital';
 import ajaxHelpers from '../utils/ajaxHelpers';
+// import axios from 'axios';
 
 const HospitalContainer = React.createClass({
   getInitialState: function(){
@@ -11,44 +11,36 @@ const HospitalContainer = React.createClass({
       records: []
     }
   },
-  onUpdateSearch: function(e){
-    console.log(e.target.value);
-    this.setState({
-      searchTerm: e.target.value
-    });
+  //  onUpdateSearch: function(e){
+  //    console.log(response.data);
+  //    this.setState({
+  //    searchTerm: response.data
+  //   });
+  // },
+  componentDidMount: function(){
+    // this.props.fetchProfile();
+  // HospitalCall: function(){
+      ajaxHelpers.hospitalCall()
+      .then(function(response){
+      console.log(response.data);
+        this.setState({
+          records: response.data
+        });
+    }.bind(this));
   },
 
-
-    HospitalCall: function(){
-      axios.get('https://data.cityofnewyork.us/resource/w7a6-9xrz.json')
-      .then(function(response){
-        console.log(response.data);
-          this.setState({
-            records: response.data
-          });
-      })
-    },
-
-
   render: function() {
-    const recordListElements = [];
-    for(const record of this.state.records){
-      console.log(record);
-      for(const key in record){
-        recordListElements.push(<li> {record[key]}</li>);
-      }
+    var recordListElements = [];
+
+    for (var i = 0; i < this.state.records.length; i++) {
+      recordListElements.push(<p>{this.state.records[i].facility_name}</p>);
     }
     console.log(recordListElements);
 
 
     return (
       <div>
-        <Hospital
-          recordList={recordListElements}
-          hospitalapi={HospitalCall}
-          searchTerm={searchTerm}
-          onUpdateSearch={onUpdateSearch}
-        />
+        {recordListElements}
       </div>
     );
   }

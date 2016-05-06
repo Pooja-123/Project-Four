@@ -10,14 +10,15 @@ import Home from '../components/Home';
 import Header from '../components/Header';
 
 const routes =(
-  <Router history ={hashHistory}>
-    <Route path='/'component={Main}>
+      <Router history ={hashHistory}>
+      <Route path='/'component={Main}>
       <IndexRoute component={Home} />
       <Route path='List' component={ListContainer} />
       <Route path='Add' component={AddContainer} />
       <Route path='Delete'component={DeleteContainer} />
       <Route path='Search' component={SearchContainer} />
-      
+      <Route path="HospitalCall" component={HospitalContainer} />
+
       </Route>
     </Router>
 
